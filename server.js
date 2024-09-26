@@ -34,9 +34,18 @@ myDB(async client => {
   app.route('/').get((req, res) => {
     res.render('index', {
       title: 'Connected to Database',
-      message: 'Please log in'
+      message: 'Please log in',
+      showLogin: true
     });
   });
+
+  app.route('/login').post(passport.authenticate('local', { failureRedirect: '/' }), (req, res) => {
+    res.redirect('/profile');
+  })
+
+  app.route('/profile').get((req,res) => {
+    res.render('profile');
+  })
 
   passport.use(new LocalStrategy((username, password, done) => {
     myDataBase.findOne({ username: username }, (err, user) => {
