@@ -31,7 +31,7 @@ module.exports = function (app, myDataBase) {
   passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: 'https://3000-freecodecam-boilerplate-x2peoslokyd.ws-eu116.gitpod.io'
+    callbackURL: 'https://3000-freecodecam-boilerplate-r50p6jy4zsu.ws-eu118.gitpod.io/auth/github/callback'
     },
     function (accessToken, refreshToken, profile, cb) {
       console.log(profile);

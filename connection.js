@@ -12,6 +12,9 @@ async function main(callback) {
 
         // Make the appropriate DB calls
         await callback(client);
+        io.on('connection', socket => {
+            console.log('A user has connected');
+          });
 
     } catch (e) {
         // Catch any errors

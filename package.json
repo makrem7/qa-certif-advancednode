@@ -1,6 +1,6 @@
 {
   "name": "fcc-advanced-node-and-express",
-  "author": "http://github.com/JosephLivengood",
+  "author": "http://github.com/makrem7",
   "version": "0.0.1",
   "description": "What am I about?",
   "main": "server.js",
@@ -21,7 +21,9 @@
     "passport-local": "~1.0.0",
     "passport.socketio": "~3.7.0",
     "pug": "~3.0.0",
-    "socket.io": "~2.3.0"
+    "socket.io": "~2.3.0",
+    "http":"0.0.1-security",
+    "passport-socket.io": "3.7.0"
   },
   "keywords": [
     "node",
